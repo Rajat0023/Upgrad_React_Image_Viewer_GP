@@ -228,6 +228,7 @@ class Profile extends Component {
     closeMenuHandler = () => {
         this.setState({ open: false })
         // clear session storage and redirect to Login Page
+        sessionStorage.clear();
     }
 
     openEditModalHandler = () => {
@@ -318,7 +319,6 @@ class Profile extends Component {
             <div>
                 {/* Header portion containing profile Icon and image-logo as clickable */}
                 <header className="app-header">
-
                     <span className="header-logo" onClick={this.headerlogoClickHandler}>Image Viewer </span>
                     <Avatar alt={this.state.username} src={this.state.profilepicture} className="avatar-logo"
                         onClick={this.profileiconClickHandler} />
